@@ -1,0 +1,57 @@
+html {
+	background: #0909092e !important;
+}
+body {
+	background: rgba(0, 0, 0, 0.00) !important;
+	color: #fff;
+	font-size: 19px;
+	font-family: Segoe UI;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+		a {
+			text-decoration: none;
+			color:#fff;
+			
+		}
+		#header {
+			display: none;
+		}
+		#parentDirLinkBox {
+			display: none !important;
+		}
+
+a.icon:hover {
+	text-decoration: none !important;
+	
+}
+#tbody tr:hover {
+	background: #80808078;
+}
+td {
+	padding: 7px;
+}
+th {
+	cursor: pointer;
+	text-align: left;
+}
+a.dir, a.file {
+	
+	background-position: center left !important;
+}
+
+
+
+
+video {
+	margin-top:30%;
+	height: 80px;
+	padding-bottom:25px;
+	width: 100%;
+	background:rgba(255, 255, 255, 0.70);
+	border-radius:10px;
+}
+
+video::-webkit-media-controls-enclosure {
+	background: #0000 !important;
+}
