@@ -28,9 +28,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow 
     {
-
+        #region init var
         int lastrn;
-
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -69,6 +68,9 @@ namespace WpfApp1
    
 
         List<string> nameList;
+        #endregion
+
+        #region Init Function
         public MainWindow()
         {
         
@@ -76,18 +78,11 @@ namespace WpfApp1
             //check if launced as admin waysearch
             nread = new NTFSRead();
             nread.getPriv();
-
             timerupdate = new SetTimer();
             timerupdate.startTimer(30);
-
-      
-
             mainw.Topmost = true;
             this.ShowInTaskbar = true;
-
-
             WindowState = WindowState.Normal;
-
 
             this.Left = (SystemParameters.PrimaryScreenWidth/2) - mainw.Width/2;
             this.Top = (SystemParameters.PrimaryScreenHeight / 4) ;
@@ -107,25 +102,23 @@ namespace WpfApp1
             // register the event that is fired after the key press.
             hook.KeyPressed += new EventHandler<KeyPressedEventArgs>(hook_KeyPressed);
 
-
-
             //DESIGN CHANGE
             changeDesign("small");
-
-     
+  
             // register the controls
             hook.RegisterHotKey(ModifierKeys.Alt ,Keys.Space);
 
-
         }
+        #endregion
 
+        #region Get all exception
         void App_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             // Process unhandled exception
-
             // Prevent default unhandled exception processing
             e.Handled = true;
         }
+
         void OnDispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
             string errorMessage = string.Format("An unhandled exception occurred: {0}", e.Exception.Message);
@@ -135,7 +128,7 @@ namespace WpfApp1
             // for quick debugging etc.
             e.Handled = true;
         }
-
+        #endregion
 
         #region TextBox-TextChanged-txtAuto
         private void autoComplete(int nchar)
@@ -189,115 +182,7 @@ namespace WpfApp1
 
         #endregion
 
-        #region ListBox-SelectionChanged-lbSuggestion
-        /* private void lbSuggestion_SelectionChanged(object sender, SelectionChangedEventArgs e)
-         {
-             if (lbSuggestion.ItemsSource != null)
-             {
-                 lbSuggestion.Visibility = Visibility.Collapsed;
-                 search.TextChanged -= new TextChangedEventHandler(txtAuto_TextChanged);
-                 if (lbSuggestion.SelectedIndex != -1)
-                 {
-                     search.Text = lbSuggestion.SelectedItem.ToString();
-                 }
-                 search.TextChanged += new TextChangedEventHandler(txtAuto_TextChanged);
-             }
-         }*/
-        #endregion
-
-
-
-        private void SystemTheme_ThemeChanged(object sender, EventArgs e)
-        {
-            //    SharedVar.IsThemeV =  SourceChord.FluentWPF.SystemTheme.WindowsTheme.ToString();
-           
-            if (SourceChord.FluentWPF.SystemTheme.WindowsTheme.ToString() != SharedVar.IsThemeV )
-            {
-              
-                nread.restartApp();
-            }
-           
-        }
-
-        protected override void OnDeactivated(EventArgs e)
-        {
-           
-
-            base.OnDeactivated(e);
-            if (SharedVar.isIndexing == false)
-            {
-                search.Text = "";
-            }
-            SharedVar.typeView = "v5";
-            browseContent.Source = new Uri("Templates/EmptyView.xaml", UriKind.Relative);
-            WindowState = WindowState.Minimized;
-            Debug.Write("lost focus");
-            /* */
-        }
-        
-        public void onNormalStart()
-        {
-            //start minimized after the first fime
-            WindowState = WindowState.Minimized;
-        }
-
-
-        /* TRAY ICON STUFF 
-
-
-        protected override void OnInitialized(EventArgs e)
-        {
-
-            //Tray Icon Settings
-            notifyIcon = new NotifyIcon();
-            notifyIcon.Click += new EventHandler(notifyIcon_Click);
-
-            notifyIcon.DoubleClick += new EventHandler(notifyIcon_DoubleClick);
-            notifyIcon.Icon = IconFromFilePath("pack://application:,,,/Images/trayicon.ico");
-}
-
-        
-        public static Icon IconFromFilePath(string filePath)
-        {
-            var result = (Icon)null;
-
-            try
-            {
-                result = System.Drawing.Icon.ExtractAssociatedIcon(filePath);
-            }
-            catch (System.Exception)
-            {
-                // swallow and return nothing. You could supply a default Icon here as well
-            }
-
-            return result;
-        }*/
-
-
-        private void OnStateChanged(object sender, EventArgs e)
-        {
-            if (this.WindowState == WindowState.Minimized)
-            {
-                this.Topmost = false;
-                this.ShowInTaskbar = false;
-                resetPlayer();
-                //    notifyIcon.Visible = true;
-            }
-            else
-            {
-             //   notifyIcon.Visible = true;
-                this.ShowInTaskbar = true;
-                this.Topmost = true;
-                this.Activate();
-
-                search.Focusable = true;
-                FocusManager.SetFocusedElement(mainw, search);
-                Keyboard.Focus(search);
-                KeyPress.press();
-
-            }
-        }
-
+        #region Init/Loading Function
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
             
@@ -367,18 +252,9 @@ namespace WpfApp1
 
 
         }
+        #endregion
 
-
-        void notifyIcon_Click(object sender, EventArgs e)
-        {
-            WindowState = WindowState.Normal;
-        }
-        private void notifyIcon_DoubleClick(object sender, EventArgs e)
-        {
-            // NOP
-        }
-
-
+        #region Search Logic
         /* END TRAY ICON STUFF */
         public int RandomNumber(int min, int max)
         {
@@ -397,18 +273,21 @@ namespace WpfApp1
 
 
                 //QUICK HACK: CHANGE COLOR BASED ON WINDOWS THEME
-                if (SourceChord.FluentWPF.SystemTheme.WindowsTheme.ToString() == "Dark")
+                if (SourceChord.FluentWPF.SystemTheme.WindowsTheme.ToString() == "Light")
                 {
-                    SolidColorBrush white = new SolidColorBrush(Color.FromArgb(200,255, 255, 255));
-                    search.Foreground = white;
-                    search.CaretBrush = white;
-
-                }
-                else
-                {
+               
                     SolidColorBrush black = new SolidColorBrush(Color.FromArgb(200, 0, 0, 0));
                     search.Foreground = black;
                     search.CaretBrush = black;
+              
+                }
+                else
+                {
+
+                    SolidColorBrush white = new SolidColorBrush(Color.FromArgb(200, 255, 255, 255));
+                    search.Foreground = white;
+                    search.CaretBrush = white;
+
                 }
 
 
@@ -496,12 +375,13 @@ namespace WpfApp1
                         else
                         {
                             lbSuggestion.Items.Clear(); //clear suggestion box if no results
-                        changeDesign("small");
+                            changeDesign("small");
 
                         }
                     }
                     catch
                     {
+                        
                         changeDesign("small");
 
                     }
@@ -530,13 +410,8 @@ namespace WpfApp1
 
         }
 
-        private void ListBoxItem_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                openProc();
-            }
-        }
+
+
 
 
         private void search_PreviewKeyDown(object sender, System.Windows.Input.KeyEventArgs e)
@@ -587,12 +462,10 @@ namespace WpfApp1
                 }
 
         }
-        private void ListBoxItem_MouseDoubleClick(object sender, RoutedEventArgs e)
-        {
-            openProc();
-        }
 
+        #endregion
 
+        #region FrameLogic
         private void MainFrame_ContentRendered(object sender, EventArgs e)
         {
 
@@ -794,11 +667,27 @@ namespace WpfApp1
                 //
             }
         }
+        #endregion
 
+        #region List Logic
+
+        private void ListBoxItem_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                openProc();
+            }
+        }
+
+
+        private void ListBoxItem_MouseDoubleClick(object sender, RoutedEventArgs e)
+        {
+            openProc();
+        }
 
         private void ListBoxItem_Selected(object sender, RoutedEventArgs e)
         {
-            
+            //todo ?
         }
 
         private void ListBoxItem_MouseDown(object sender, MouseButtonEventArgs e)
@@ -879,31 +768,67 @@ namespace WpfApp1
 
 
         }
+        #endregion
 
-        void hook_KeyPressed(object sender, KeyPressedEventArgs e)
+        #region Design Changes
+
+        public void onNormalStart()
         {
-            // show the keys pressed in a label.
-            
+            //start minimized after the first fime
+            WindowState = WindowState.Minimized;
+        }
 
+
+        protected override void OnDeactivated(EventArgs e)
+        {
+
+
+            base.OnDeactivated(e);
+            if (SharedVar.isIndexing == false)
+            {
+                search.Text = "";
+            }
+            SharedVar.typeView = "v5";
+            browseContent.Source = new Uri("Templates/EmptyView.xaml", UriKind.Relative);
+            WindowState = WindowState.Minimized;
+            Debug.Write("lost focus");
+            /* */
+        }
+
+        private void OnStateChanged(object sender, EventArgs e)
+        {
             if (this.WindowState == WindowState.Minimized)
             {
-                WindowState = WindowState.Normal;
-              
-                search.Focusable = true;
-                
-                search.Focus();
-                
-                Keyboard.ClearFocus();
-                Keyboard.Focus(search);
-                search.IsEnabled = true;
-             
+                this.Topmost = false;
+                this.ShowInTaskbar = false;
+                resetPlayer();
+                //    notifyIcon.Visible = true;
             }
             else
             {
-                search.Text = "";
+                //   notifyIcon.Visible = true;
+                this.ShowInTaskbar = true;
+                this.Topmost = true;
+                this.Activate();
 
-                WindowState = WindowState.Minimized;
+                search.Focusable = true;
+                FocusManager.SetFocusedElement(mainw, search);
+                Keyboard.Focus(search);
+                KeyPress.press();
+
             }
+        }
+
+        private void SystemTheme_ThemeChanged(object sender, EventArgs e)
+        {
+            //    SharedVar.IsThemeV =  SourceChord.FluentWPF.SystemTheme.WindowsTheme.ToString();
+
+            if (SourceChord.FluentWPF.SystemTheme.WindowsTheme.ToString() != SharedVar.IsThemeV)
+            {
+
+                nread.restartApp();
+            }
+
         }
 
         private void changeDesign(string type)
@@ -912,6 +837,7 @@ namespace WpfApp1
             switch (type)
             {
                 case "small":
+                    lbSuggestion.Visibility=Visibility.Collapsed;
                     mainw.Height = SharedVar.heightInit;
                     mainw.Width = SharedVar.widthLong;
                     resultsList.Width = SharedVar.widthLong;
@@ -975,8 +901,81 @@ namespace WpfApp1
         }
             catch { }
             }
+        #endregion
+
+        #region Windows ShortCut Behaviour
+        
+
+        void notifyIcon_Click(object sender, EventArgs e)
+        {
+            WindowState = WindowState.Normal;
+        }
+
+        private void notifyIcon_DoubleClick(object sender, EventArgs e)
+        {
+            // NOP
+        }
+
+
+        void hook_KeyPressed(object sender, KeyPressedEventArgs e)
+        {
+            // show the keys pressed in a label.
+
+
+            if (this.WindowState == WindowState.Minimized)
+            {
+                WindowState = WindowState.Normal;
+
+                search.Focusable = true;
+
+                search.Focus();
+
+                Keyboard.ClearFocus();
+                Keyboard.Focus(search);
+                search.IsEnabled = true;
+
+            }
+            else
+            {
+                search.Text = "";
+
+                WindowState = WindowState.Minimized;
+            }
+        }
+        /* TRAY ICON STUFF 
+
+
+         protected override void OnInitialized(EventArgs e)
+         {
+
+             //Tray Icon Settings
+             notifyIcon = new NotifyIcon();
+             notifyIcon.Click += new EventHandler(notifyIcon_Click);
+
+             notifyIcon.DoubleClick += new EventHandler(notifyIcon_DoubleClick);
+             notifyIcon.Icon = IconFromFilePath("pack://application:,,,/Images/trayicon.ico");
+ }
+
+
+         public static Icon IconFromFilePath(string filePath)
+         {
+             var result = (Icon)null;
+
+             try
+             {
+                 result = System.Drawing.Icon.ExtractAssociatedIcon(filePath);
+             }
+             catch (System.Exception)
+             {
+                 // swallow and return nothing. You could supply a default Icon here as well
+             }
+
+             return result;
+         }*/
+
+        #endregion
     }
 
 
- 
+
 }

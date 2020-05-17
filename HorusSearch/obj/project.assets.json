@@ -1,0 +1,2402 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.1": {
+      "cef.redist.x64/79.1.36": {
+        "type": "package",
+        "build": {
+          "build/cef.redist.x64.props": {}
+        }
+      },
+      "cef.redist.x86/79.1.36": {
+        "type": "package",
+        "build": {
+          "build/cef.redist.x86.props": {}
+        }
+      },
+      "CefSharp.Common/79.1.360": {
+        "type": "package",
+        "dependencies": {
+          "cef.redist.x64": "[79.1.36]",
+          "cef.redist.x86": "[79.1.36]"
+        },
+        "build": {
+          "build/CefSharp.Common.props": {},
+          "build/CefSharp.Common.targets": {}
+        }
+      },
+      "CefSharp.Wpf/79.1.360": {
+        "type": "package",
+        "dependencies": {
+          "CefSharp.Common": "[79.1.360]"
+        },
+        "build": {
+          "build/CefSharp.Wpf.props": {},
+          "build/CefSharp.Wpf.targets": {}
+        }
+      },
+      "EntityFramework/6.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "build": {
+          "build/EntityFramework.props": {},
+          "build/EntityFramework.targets": {}
+        }
+      },
+      "FluentWPF/0.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FluentWPF.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentWPF.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "3.1.4",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2",
+          "SQLitePCLRaw.lib.e_sqlite3": "2.0.2",
+          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.2"
+        },
+        "compile": {
+          "lib/net461/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/net461/SQLitePCLRaw.nativelibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net461/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/net461/SQLitePCLRaw.nativelibrary.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net461/_._": {}
+        },
+        "runtime": {
+          "lib/net461/_._": {}
+        },
+        "build": {
+          "build/net461/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/alpine-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "alpine-x64"
+          },
+          "runtimes/linux-arm/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-arm"
+          },
+          "runtimes/linux-arm64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-arm64"
+          },
+          "runtimes/linux-armel/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-armel"
+          },
+          "runtimes/linux-musl-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-musl-x64"
+          },
+          "runtimes/linux-x64/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x86/native/libe_sqlite3.so": {
+            "assetType": "native",
+            "rid": "linux-x86"
+          },
+          "runtimes/osx-x64/native/libe_sqlite3.dylib": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-arm/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm"
+          },
+          "runtimes/win-arm64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/e_sqlite3.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.112.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.112.2",
+          "System.Data.SQLite.EF6": "1.0.112.2",
+          "System.Data.SQLite.Linq": "1.0.112.2"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.112.2": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "build": {
+          "build/net40/System.Data.SQLite.Core.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/linux-x64/native/netstandard2.1/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "linux-x64"
+          },
+          "runtimes/osx-x64/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/osx-x64/native/netstandard2.1/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "osx-x64"
+          },
+          "runtimes/win-x64/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/netstandard2.1/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/netstandard2.0/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/netstandard2.1/SQLite.Interop.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.112.2": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.3.0"
+        },
+        "compile": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.112.2": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        }
+      },
+      "System.IO.FileSystem/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.FileSystem.Primitives": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.dll": {}
+        }
+      },
+      "System.IO.FileSystem.DriveInfo/4.3.1": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.FileSystem": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.DriveInfo.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.DriveInfo.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.IO.FileSystem.DriveInfo.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/net46/System.IO.FileSystem.DriveInfo.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "System.IO.FileSystem.Primitives/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.1/win": {
+      "cef.redist.x64/79.1.36": {
+        "type": "package",
+        "build": {
+          "build/cef.redist.x64.props": {}
+        }
+      },
+      "cef.redist.x86/79.1.36": {
+        "type": "package",
+        "build": {
+          "build/cef.redist.x86.props": {}
+        }
+      },
+      "CefSharp.Common/79.1.360": {
+        "type": "package",
+        "dependencies": {
+          "cef.redist.x64": "[79.1.36]",
+          "cef.redist.x86": "[79.1.36]"
+        },
+        "build": {
+          "build/CefSharp.Common.props": {},
+          "build/CefSharp.Common.targets": {}
+        }
+      },
+      "CefSharp.Wpf/79.1.360": {
+        "type": "package",
+        "dependencies": {
+          "CefSharp.Common": "[79.1.360]"
+        },
+        "build": {
+          "build/CefSharp.Wpf.props": {},
+          "build/CefSharp.Wpf.targets": {}
+        }
+      },
+      "EntityFramework/6.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "build": {
+          "build/EntityFramework.props": {},
+          "build/EntityFramework.targets": {}
+        }
+      },
+      "FluentWPF/0.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FluentWPF.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentWPF.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "3.1.4",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2",
+          "SQLitePCLRaw.lib.e_sqlite3": "2.0.2",
+          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.2"
+        },
+        "compile": {
+          "lib/net461/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/net461/SQLitePCLRaw.nativelibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net461/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/net461/SQLitePCLRaw.nativelibrary.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net461/_._": {}
+        },
+        "runtime": {
+          "lib/net461/_._": {}
+        },
+        "build": {
+          "build/net461/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.112.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.112.2",
+          "System.Data.SQLite.EF6": "1.0.112.2",
+          "System.Data.SQLite.Linq": "1.0.112.2"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.112.2": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "build": {
+          "build/net40/System.Data.SQLite.Core.targets": {}
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.112.2": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.3.0"
+        },
+        "compile": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.112.2": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        }
+      },
+      "System.IO.FileSystem/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.FileSystem.Primitives": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.dll": {}
+        }
+      },
+      "System.IO.FileSystem.DriveInfo/4.3.1": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.FileSystem": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.DriveInfo.dll": {}
+        },
+        "runtime": {
+          "runtimes/win/lib/net46/System.IO.FileSystem.DriveInfo.dll": {}
+        }
+      },
+      "System.IO.FileSystem.Primitives/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.1/win-x64": {
+      "cef.redist.x64/79.1.36": {
+        "type": "package",
+        "build": {
+          "build/cef.redist.x64.props": {}
+        }
+      },
+      "cef.redist.x86/79.1.36": {
+        "type": "package",
+        "build": {
+          "build/cef.redist.x86.props": {}
+        }
+      },
+      "CefSharp.Common/79.1.360": {
+        "type": "package",
+        "dependencies": {
+          "cef.redist.x64": "[79.1.36]",
+          "cef.redist.x86": "[79.1.36]"
+        },
+        "build": {
+          "build/CefSharp.Common.props": {},
+          "build/CefSharp.Common.targets": {}
+        }
+      },
+      "CefSharp.Wpf/79.1.360": {
+        "type": "package",
+        "dependencies": {
+          "CefSharp.Common": "[79.1.360]"
+        },
+        "build": {
+          "build/CefSharp.Wpf.props": {},
+          "build/CefSharp.Wpf.targets": {}
+        }
+      },
+      "EntityFramework/6.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "build": {
+          "build/EntityFramework.props": {},
+          "build/EntityFramework.targets": {}
+        }
+      },
+      "FluentWPF/0.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FluentWPF.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentWPF.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "3.1.4",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2",
+          "SQLitePCLRaw.lib.e_sqlite3": "2.0.2",
+          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.2"
+        },
+        "compile": {
+          "lib/net461/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/net461/SQLitePCLRaw.nativelibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net461/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/net461/SQLitePCLRaw.nativelibrary.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net461/_._": {}
+        },
+        "runtime": {
+          "lib/net461/_._": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/e_sqlite3.dll": {}
+        },
+        "build": {
+          "build/net461/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.112.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.112.2",
+          "System.Data.SQLite.EF6": "1.0.112.2",
+          "System.Data.SQLite.Linq": "1.0.112.2"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.112.2": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/netstandard2.0/SQLite.Interop.dll": {},
+          "runtimes/win-x64/native/netstandard2.1/SQLite.Interop.dll": {}
+        },
+        "build": {
+          "build/net40/System.Data.SQLite.Core.targets": {}
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.112.2": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.3.0"
+        },
+        "compile": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.112.2": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        }
+      },
+      "System.IO.FileSystem/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.FileSystem.Primitives": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.dll": {}
+        }
+      },
+      "System.IO.FileSystem.DriveInfo/4.3.1": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.FileSystem": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.DriveInfo.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.DriveInfo.dll": {}
+        }
+      },
+      "System.IO.FileSystem.Primitives/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.1/win-x86": {
+      "cef.redist.x64/79.1.36": {
+        "type": "package",
+        "build": {
+          "build/cef.redist.x64.props": {}
+        }
+      },
+      "cef.redist.x86/79.1.36": {
+        "type": "package",
+        "build": {
+          "build/cef.redist.x86.props": {}
+        }
+      },
+      "CefSharp.Common/79.1.360": {
+        "type": "package",
+        "dependencies": {
+          "cef.redist.x64": "[79.1.36]",
+          "cef.redist.x86": "[79.1.36]"
+        },
+        "build": {
+          "build/CefSharp.Common.props": {},
+          "build/CefSharp.Common.targets": {}
+        }
+      },
+      "CefSharp.Wpf/79.1.360": {
+        "type": "package",
+        "dependencies": {
+          "CefSharp.Common": "[79.1.360]"
+        },
+        "build": {
+          "build/CefSharp.Wpf.props": {},
+          "build/CefSharp.Wpf.targets": {}
+        }
+      },
+      "EntityFramework/6.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.ComponentModel.DataAnnotations"
+        ],
+        "compile": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/net45/EntityFramework.SqlServer.dll": {},
+          "lib/net45/EntityFramework.dll": {}
+        },
+        "build": {
+          "build/EntityFramework.props": {},
+          "build/EntityFramework.targets": {}
+        }
+      },
+      "FluentWPF/0.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/net45/FluentWPF.dll": {}
+        },
+        "runtime": {
+          "lib/net45/FluentWPF.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.Sqlite.Core": "3.1.4",
+          "SQLitePCLRaw.bundle_e_sqlite3": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {}
+        }
+      },
+      "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2",
+          "SQLitePCLRaw.lib.e_sqlite3": "2.0.2",
+          "SQLitePCLRaw.provider.dynamic_cdecl": "2.0.2"
+        },
+        "compile": {
+          "lib/net461/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/net461/SQLitePCLRaw.nativelibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net461/SQLitePCLRaw.batteries_v2.dll": {},
+          "lib/net461/SQLitePCLRaw.nativelibrary.dll": {}
+        }
+      },
+      "SQLitePCLRaw.core/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
+      "SQLitePCLRaw.lib.e_sqlite3/2.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net461/_._": {}
+        },
+        "runtime": {
+          "lib/net461/_._": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/e_sqlite3.dll": {}
+        },
+        "build": {
+          "build/net461/SQLitePCLRaw.lib.e_sqlite3.targets": {}
+        }
+      },
+      "SQLitePCLRaw.provider.dynamic_cdecl/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll": {}
+        }
+      },
+      "System.Buffers/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.Data.SQLite/1.0.112.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Data.SQLite.Core": "1.0.112.2",
+          "System.Data.SQLite.EF6": "1.0.112.2",
+          "System.Data.SQLite.Linq": "1.0.112.2"
+        }
+      },
+      "System.Data.SQLite.Core/1.0.112.2": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.dll": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/netstandard2.0/SQLite.Interop.dll": {},
+          "runtimes/win-x86/native/netstandard2.1/SQLite.Interop.dll": {}
+        },
+        "build": {
+          "build/net40/System.Data.SQLite.Core.targets": {}
+        }
+      },
+      "System.Data.SQLite.EF6/1.0.112.2": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "6.3.0"
+        },
+        "compile": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.EF6.dll": {}
+        }
+      },
+      "System.Data.SQLite.Linq/1.0.112.2": {
+        "type": "package",
+        "compile": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        },
+        "runtime": {
+          "lib/net40/System.Data.SQLite.Linq.dll": {}
+        }
+      },
+      "System.IO.FileSystem/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.FileSystem.Primitives": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.dll": {}
+        }
+      },
+      "System.IO.FileSystem.DriveInfo/4.3.1": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.FileSystem": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.DriveInfo.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.DriveInfo.dll": {}
+        }
+      },
+      "System.IO.FileSystem.Primitives/4.3.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.IO.FileSystem.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.IO.FileSystem.Primitives.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        }
+      },
+      "System.Numerics.Vectors/4.4.0": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Numerics",
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net46/System.Numerics.Vectors.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Numerics.Vectors.dll": {}
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "mscorlib"
+        ],
+        "compile": {
+          "ref/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/net461/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "cef.redist.x64/79.1.36": {
+      "sha512": "BAkFrlP3DTEsf9GaH9RUAgK7EhdvwViBdakE2YolJS1Xsg6/e8UJ5xhpTHJ0IZV+EG+N5MPLG5iGoYFmIC0NdQ==",
+      "type": "package",
+      "path": "cef.redist.x64/79.1.36",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CEF/README.txt",
+        "CEF/cef.pak",
+        "CEF/cef_100_percent.pak",
+        "CEF/cef_200_percent.pak",
+        "CEF/cef_extensions.pak",
+        "CEF/chrome_elf.dll",
+        "CEF/d3dcompiler_47.dll",
+        "CEF/devtools_resources.pak",
+        "CEF/icudtl.dat",
+        "CEF/libEGL.dll",
+        "CEF/libGLESv2.dll",
+        "CEF/libcef.dll",
+        "CEF/locales/am.pak",
+        "CEF/locales/ar.pak",
+        "CEF/locales/bg.pak",
+        "CEF/locales/bn.pak",
+        "CEF/locales/ca.pak",
+        "CEF/locales/cs.pak",
+        "CEF/locales/da.pak",
+        "CEF/locales/de.pak",
+        "CEF/locales/el.pak",
+        "CEF/locales/en-GB.pak",
+        "CEF/locales/en-US.pak",
+        "CEF/locales/es-419.pak",
+        "CEF/locales/es.pak",
+        "CEF/locales/et.pak",
+        "CEF/locales/fa.pak",
+        "CEF/locales/fi.pak",
+        "CEF/locales/fil.pak",
+        "CEF/locales/fr.pak",
+        "CEF/locales/gu.pak",
+        "CEF/locales/he.pak",
+        "CEF/locales/hi.pak",
+        "CEF/locales/hr.pak",
+        "CEF/locales/hu.pak",
+        "CEF/locales/id.pak",
+        "CEF/locales/it.pak",
+        "CEF/locales/ja.pak",
+        "CEF/locales/kn.pak",
+        "CEF/locales/ko.pak",
+        "CEF/locales/lt.pak",
+        "CEF/locales/lv.pak",
+        "CEF/locales/ml.pak",
+        "CEF/locales/mr.pak",
+        "CEF/locales/ms.pak",
+        "CEF/locales/nb.pak",
+        "CEF/locales/nl.pak",
+        "CEF/locales/pl.pak",
+        "CEF/locales/pt-BR.pak",
+        "CEF/locales/pt-PT.pak",
+        "CEF/locales/ro.pak",
+        "CEF/locales/ru.pak",
+        "CEF/locales/sk.pak",
+        "CEF/locales/sl.pak",
+        "CEF/locales/sr.pak",
+        "CEF/locales/sv.pak",
+        "CEF/locales/sw.pak",
+        "CEF/locales/ta.pak",
+        "CEF/locales/te.pak",
+        "CEF/locales/th.pak",
+        "CEF/locales/tr.pak",
+        "CEF/locales/uk.pak",
+        "CEF/locales/vi.pak",
+        "CEF/locales/zh-CN.pak",
+        "CEF/locales/zh-TW.pak",
+        "CEF/natives_blob.bin",
+        "CEF/snapshot_blob.bin",
+        "CEF/swiftshader/libEGL.dll",
+        "CEF/swiftshader/libGLESv2.dll",
+        "CEF/v8_context_snapshot.bin",
+        "build/cef.redist.x64.props",
+        "cef.redist.x64.79.1.36.nupkg.sha512",
+        "cef.redist.x64.nuspec"
+      ]
+    },
+    "cef.redist.x86/79.1.36": {
+      "sha512": "8nKwmwWEMx4QPmxOn50qLNYnfVV7QSy4p4yL/ZkBEfjwCP+heUHjtPvq79ZLkBUZSlSrt6amll2xqGccctKjSA==",
+      "type": "package",
+      "path": "cef.redist.x86/79.1.36",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CEF/README.txt",
+        "CEF/cef.pak",
+        "CEF/cef_100_percent.pak",
+        "CEF/cef_200_percent.pak",
+        "CEF/cef_extensions.pak",
+        "CEF/chrome_elf.dll",
+        "CEF/d3dcompiler_47.dll",
+        "CEF/devtools_resources.pak",
+        "CEF/icudtl.dat",
+        "CEF/libEGL.dll",
+        "CEF/libGLESv2.dll",
+        "CEF/libcef.dll",
+        "CEF/locales/am.pak",
+        "CEF/locales/ar.pak",
+        "CEF/locales/bg.pak",
+        "CEF/locales/bn.pak",
+        "CEF/locales/ca.pak",
+        "CEF/locales/cs.pak",
+        "CEF/locales/da.pak",
+        "CEF/locales/de.pak",
+        "CEF/locales/el.pak",
+        "CEF/locales/en-GB.pak",
+        "CEF/locales/en-US.pak",
+        "CEF/locales/es-419.pak",
+        "CEF/locales/es.pak",
+        "CEF/locales/et.pak",
+        "CEF/locales/fa.pak",
+        "CEF/locales/fi.pak",
+        "CEF/locales/fil.pak",
+        "CEF/locales/fr.pak",
+        "CEF/locales/gu.pak",
+        "CEF/locales/he.pak",
+        "CEF/locales/hi.pak",
+        "CEF/locales/hr.pak",
+        "CEF/locales/hu.pak",
+        "CEF/locales/id.pak",
+        "CEF/locales/it.pak",
+        "CEF/locales/ja.pak",
+        "CEF/locales/kn.pak",
+        "CEF/locales/ko.pak",
+        "CEF/locales/lt.pak",
+        "CEF/locales/lv.pak",
+        "CEF/locales/ml.pak",
+        "CEF/locales/mr.pak",
+        "CEF/locales/ms.pak",
+        "CEF/locales/nb.pak",
+        "CEF/locales/nl.pak",
+        "CEF/locales/pl.pak",
+        "CEF/locales/pt-BR.pak",
+        "CEF/locales/pt-PT.pak",
+        "CEF/locales/ro.pak",
+        "CEF/locales/ru.pak",
+        "CEF/locales/sk.pak",
+        "CEF/locales/sl.pak",
+        "CEF/locales/sr.pak",
+        "CEF/locales/sv.pak",
+        "CEF/locales/sw.pak",
+        "CEF/locales/ta.pak",
+        "CEF/locales/te.pak",
+        "CEF/locales/th.pak",
+        "CEF/locales/tr.pak",
+        "CEF/locales/uk.pak",
+        "CEF/locales/vi.pak",
+        "CEF/locales/zh-CN.pak",
+        "CEF/locales/zh-TW.pak",
+        "CEF/natives_blob.bin",
+        "CEF/snapshot_blob.bin",
+        "CEF/swiftshader/libEGL.dll",
+        "CEF/swiftshader/libGLESv2.dll",
+        "CEF/v8_context_snapshot.bin",
+        "build/cef.redist.x86.props",
+        "cef.redist.x86.79.1.36.nupkg.sha512",
+        "cef.redist.x86.nuspec"
+      ]
+    },
+    "CefSharp.Common/79.1.360": {
+      "sha512": "557XvPIHixQ4ipPHhGsTeCMtm8kbNICT2dRoYyjTiHkQo7jPOKJN69JmxLL8H0gWGV2SLlOv5ChzRD9rAJEf4w==",
+      "type": "package",
+      "path": "cefsharp.common/79.1.360",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CefSharp/x64/CefSharp.BrowserSubprocess.Core.dll",
+        "CefSharp/x64/CefSharp.BrowserSubprocess.Core.pdb",
+        "CefSharp/x64/CefSharp.BrowserSubprocess.exe",
+        "CefSharp/x64/CefSharp.BrowserSubprocess.pdb",
+        "CefSharp/x64/CefSharp.Core.dll",
+        "CefSharp/x64/CefSharp.Core.pdb",
+        "CefSharp/x64/CefSharp.Core.xml",
+        "CefSharp/x64/CefSharp.XML",
+        "CefSharp/x64/CefSharp.dll",
+        "CefSharp/x64/CefSharp.pdb",
+        "CefSharp/x86/CefSharp.BrowserSubprocess.Core.dll",
+        "CefSharp/x86/CefSharp.BrowserSubprocess.Core.pdb",
+        "CefSharp/x86/CefSharp.BrowserSubprocess.exe",
+        "CefSharp/x86/CefSharp.BrowserSubprocess.pdb",
+        "CefSharp/x86/CefSharp.Core.dll",
+        "CefSharp/x86/CefSharp.Core.pdb",
+        "CefSharp/x86/CefSharp.Core.xml",
+        "CefSharp/x86/CefSharp.XML",
+        "CefSharp/x86/CefSharp.dll",
+        "CefSharp/x86/CefSharp.pdb",
+        "build/CefSharp.Common.props",
+        "build/CefSharp.Common.targets",
+        "cefsharp.common.79.1.360.nupkg.sha512",
+        "cefsharp.common.nuspec",
+        "src/CefSharp.BrowserSubprocess.Core/AssemblyInfo.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/Async/JavascriptAsyncMethodCallback.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/Async/JavascriptAsyncMethodCallback.h",
+        "src/CefSharp.BrowserSubprocess.Core/Async/JavascriptAsyncMethodHandler.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/Async/JavascriptAsyncMethodHandler.h",
+        "src/CefSharp.BrowserSubprocess.Core/Async/JavascriptAsyncMethodWrapper.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/Async/JavascriptAsyncMethodWrapper.h",
+        "src/CefSharp.BrowserSubprocess.Core/Async/JavascriptAsyncObjectWrapper.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/Async/JavascriptAsyncObjectWrapper.h",
+        "src/CefSharp.BrowserSubprocess.Core/BindObjectAsyncHandler.h",
+        "src/CefSharp.BrowserSubprocess.Core/BrowserSubprocessExecutable.h",
+        "src/CefSharp.BrowserSubprocess.Core/CefAppUnmanagedWrapper.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/CefAppUnmanagedWrapper.h",
+        "src/CefSharp.BrowserSubprocess.Core/CefBrowserWrapper.h",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptCallbackRegistry.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptCallbackRegistry.h",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptCallbackWrapper.h",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptMethodHandler.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptMethodHandler.h",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptMethodWrapper.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptMethodWrapper.h",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptObjectWrapper.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptObjectWrapper.h",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptPostMessageHandler.h",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptPropertyHandler.h",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptPropertyWrapper.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptPropertyWrapper.h",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptRootObjectWrapper.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/JavascriptRootObjectWrapper.h",
+        "src/CefSharp.BrowserSubprocess.Core/RegisterBoundObjectHandler.h",
+        "src/CefSharp.BrowserSubprocess.Core/RegisterBoundObjectRegistry.h",
+        "src/CefSharp.BrowserSubprocess.Core/Serialization/JsObjectsSerialization.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/Serialization/JsObjectsSerialization.h",
+        "src/CefSharp.BrowserSubprocess.Core/Serialization/V8Serialization.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/Serialization/V8Serialization.h",
+        "src/CefSharp.BrowserSubprocess.Core/Stdafx.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/Stdafx.h",
+        "src/CefSharp.BrowserSubprocess.Core/SubProcess.h",
+        "src/CefSharp.BrowserSubprocess.Core/SubProcessApp.h",
+        "src/CefSharp.BrowserSubprocess.Core/TypeUtils.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/TypeUtils.h",
+        "src/CefSharp.BrowserSubprocess.Core/WcfBrowserSubprocessExecutable.h",
+        "src/CefSharp.BrowserSubprocess.Core/WcfEnabledSubProcess.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/WcfEnabledSubProcess.h",
+        "src/CefSharp.BrowserSubprocess.Core/Wrapper/Browser.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/Wrapper/Browser.h",
+        "src/CefSharp.BrowserSubprocess.Core/Wrapper/Frame.cpp",
+        "src/CefSharp.BrowserSubprocess.Core/Wrapper/Frame.h",
+        "src/CefSharp.BrowserSubprocess.Core/Wrapper/V8Context.h",
+        "src/CefSharp.BrowserSubprocess.Core/resource.h",
+        "src/CefSharp.BrowserSubprocess.Core/vcclr_local.h",
+        "src/CefSharp.BrowserSubprocess/Program.cs",
+        "src/CefSharp.BrowserSubprocess/Properties/AssemblyInfo.cs",
+        "src/CefSharp.Core/AbstractCefSettings.h",
+        "src/CefSharp.Core/AssemblyInfo.cpp",
+        "src/CefSharp.Core/BrowserSettings.h",
+        "src/CefSharp.Core/Cef.h",
+        "src/CefSharp.Core/CookieManager.cpp",
+        "src/CefSharp.Core/CookieManager.h",
+        "src/CefSharp.Core/Internals/CefAuthCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefBeforeDownloadCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefBrowserHostWrapper.cpp",
+        "src/CefSharp.Core/Internals/CefBrowserHostWrapper.h",
+        "src/CefSharp.Core/Internals/CefCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefCertificateCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefCompletionCallbackAdapter.h",
+        "src/CefSharp.Core/Internals/CefContextMenuParamsWrapper.cpp",
+        "src/CefSharp.Core/Internals/CefContextMenuParamsWrapper.h",
+        "src/CefSharp.Core/Internals/CefCookieAccessFilterAdapter.h",
+        "src/CefSharp.Core/Internals/CefDeleteCookiesCallbackAdapter.h",
+        "src/CefSharp.Core/Internals/CefDownloadItemCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefDragDataWrapper.h",
+        "src/CefSharp.Core/Internals/CefExtensionHandlerAdapter.h",
+        "src/CefSharp.Core/Internals/CefExtensionWrapper.cpp",
+        "src/CefSharp.Core/Internals/CefExtensionWrapper.h",
+        "src/CefSharp.Core/Internals/CefFileDialogCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefFrameWrapper.cpp",
+        "src/CefSharp.Core/Internals/CefFrameWrapper.h",
+        "src/CefSharp.Core/Internals/CefGetExtensionResourceCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefImageWrapper.h",
+        "src/CefSharp.Core/Internals/CefJSDialogCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefMenuModelWrapper.h",
+        "src/CefSharp.Core/Internals/CefNavigationEntryVisitorAdapter.h",
+        "src/CefSharp.Core/Internals/CefPdfPrintCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefRegisterCdmCallbackAdapter.h",
+        "src/CefSharp.Core/Internals/CefRequestCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefRequestContextHandlerAdapter.cpp",
+        "src/CefSharp.Core/Internals/CefRequestContextHandlerAdapter.h",
+        "src/CefSharp.Core/Internals/CefResolveCallbackAdapter.h",
+        "src/CefSharp.Core/Internals/CefResourceReadCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefResourceRequestHandlerAdapter.h",
+        "src/CefSharp.Core/Internals/CefResourceSkipCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefResponseFilterAdapter.h",
+        "src/CefSharp.Core/Internals/CefResponseWrapper.h",
+        "src/CefSharp.Core/Internals/CefRunContextMenuCallbackWrapper.h",
+        "src/CefSharp.Core/Internals/CefRunFileDialogCallbackAdapter.h",
+        "src/CefSharp.Core/Internals/CefSchemeRegistrarWrapper.h",
+        "src/CefSharp.Core/Internals/CefSetCookieCallbackAdapter.h",
+        "src/CefSharp.Core/Internals/CefSharpApp.h",
+        "src/CefSharp.Core/Internals/CefSharpBrowserWrapper.cpp",
+        "src/CefSharp.Core/Internals/CefSharpBrowserWrapper.h",
+        "src/CefSharp.Core/Internals/CefSslInfoWrapper.h",
+        "src/CefSharp.Core/Internals/CefTaskScheduler.h",
+        "src/CefSharp.Core/Internals/CefTaskWrapper.h",
+        "src/CefSharp.Core/Internals/CefUrlRequestClientAdapter.cpp",
+        "src/CefSharp.Core/Internals/CefUrlRequestClientAdapter.h",
+        "src/CefSharp.Core/Internals/CefValueWrapper.cpp",
+        "src/CefSharp.Core/Internals/CefValueWrapper.h",
+        "src/CefSharp.Core/Internals/CefWrapper.h",
+        "src/CefSharp.Core/Internals/CefWriteHandlerWrapper.h",
+        "src/CefSharp.Core/Internals/ClientAdapter.cpp",
+        "src/CefSharp.Core/Internals/ClientAdapter.h",
+        "src/CefSharp.Core/Internals/CookieVisitor.cpp",
+        "src/CefSharp.Core/Internals/CookieVisitor.h",
+        "src/CefSharp.Core/Internals/JavascriptCallbackFactory.cpp",
+        "src/CefSharp.Core/Internals/JavascriptCallbackFactory.h",
+        "src/CefSharp.Core/Internals/JavascriptCallbackProxy.cpp",
+        "src/CefSharp.Core/Internals/JavascriptCallbackProxy.h",
+        "src/CefSharp.Core/Internals/MCefRefPtr.h",
+        "src/CefSharp.Core/Internals/Messaging/Messages.h",
+        "src/CefSharp.Core/Internals/PluginVisitor.h",
+        "src/CefSharp.Core/Internals/RenderClientAdapter.h",
+        "src/CefSharp.Core/Internals/ReportUnhandledExceptions.h",
+        "src/CefSharp.Core/Internals/Serialization/JsObjectsSerialization.cpp",
+        "src/CefSharp.Core/Internals/Serialization/JsObjectsSerialization.h",
+        "src/CefSharp.Core/Internals/Serialization/ObjectsSerialization.cpp",
+        "src/CefSharp.Core/Internals/Serialization/ObjectsSerialization.h",
+        "src/CefSharp.Core/Internals/Serialization/Primitives.cpp",
+        "src/CefSharp.Core/Internals/Serialization/Primitives.h",
+        "src/CefSharp.Core/Internals/Serialization/V8Serialization.cpp",
+        "src/CefSharp.Core/Internals/Serialization/V8Serialization.h",
+        "src/CefSharp.Core/Internals/StringUtils.h",
+        "src/CefSharp.Core/Internals/StringVisitor.cpp",
+        "src/CefSharp.Core/Internals/StringVisitor.h",
+        "src/CefSharp.Core/Internals/TypeConversion.h",
+        "src/CefSharp.Core/ManagedCefBrowserAdapter.cpp",
+        "src/CefSharp.Core/ManagedCefBrowserAdapter.h",
+        "src/CefSharp.Core/NativeMethodWrapper.cpp",
+        "src/CefSharp.Core/NativeMethodWrapper.h",
+        "src/CefSharp.Core/PopupFeatures.h",
+        "src/CefSharp.Core/PostData.h",
+        "src/CefSharp.Core/PostDataElement.h",
+        "src/CefSharp.Core/Request.cpp",
+        "src/CefSharp.Core/Request.h",
+        "src/CefSharp.Core/RequestContext.cpp",
+        "src/CefSharp.Core/RequestContext.h",
+        "src/CefSharp.Core/RequestContextSettings.h",
+        "src/CefSharp.Core/ResourceHandlerWrapper.cpp",
+        "src/CefSharp.Core/ResourceHandlerWrapper.h",
+        "src/CefSharp.Core/SchemeHandlerFactoryWrapper.h",
+        "src/CefSharp.Core/Stdafx.cpp",
+        "src/CefSharp.Core/Stdafx.h",
+        "src/CefSharp.Core/UrlRequest.cpp",
+        "src/CefSharp.Core/UrlRequest.h",
+        "src/CefSharp.Core/WindowInfo.h",
+        "src/CefSharp.Core/resource.h",
+        "src/CefSharp.Core/vcclr_local.h",
+        "src/CefSharp/AsyncExtensions.cs",
+        "src/CefSharp/BindingOptions.cs",
+        "src/CefSharp/Callback/IAuthCallback.cs",
+        "src/CefSharp/Callback/IBeforeDownloadCallback.cs",
+        "src/CefSharp/Callback/ICallback.cs",
+        "src/CefSharp/Callback/ICompletionCallback.cs",
+        "src/CefSharp/Callback/IDeleteCookiesCallback.cs",
+        "src/CefSharp/Callback/IDownloadItemCallback.cs",
+        "src/CefSharp/Callback/IFileDialogCallback.cs",
+        "src/CefSharp/Callback/IGetExtensionResourceCallback.cs",
+        "src/CefSharp/Callback/IJavascriptCallback.cs",
+        "src/CefSharp/Callback/IJsDialogCallback.cs",
+        "src/CefSharp/Callback/IPrintToPdfCallback.cs",
+        "src/CefSharp/Callback/IRegisterCdmCallback.cs",
+        "src/CefSharp/Callback/IRequestCallback.cs",
+        "src/CefSharp/Callback/IResolveCallback.cs",
+        "src/CefSharp/Callback/IResourceReadCallback.cs",
+        "src/CefSharp/Callback/IResourceSkipCallback.cs",
+        "src/CefSharp/Callback/IRunContextMenuCallback.cs",
+        "src/CefSharp/Callback/IRunFileDialogCallback.cs",
+        "src/CefSharp/Callback/ISelectClientCertificateCallback.cs",
+        "src/CefSharp/Callback/ISetCookieCallback.cs",
+        "src/CefSharp/Callback/NoOpCompletionCallback.cs",
+        "src/CefSharp/Callback/TaskCompletionCallback.cs",
+        "src/CefSharp/Callback/TaskDeleteCookiesCallback.cs",
+        "src/CefSharp/Callback/TaskPrintToPdfCallback.cs",
+        "src/CefSharp/Callback/TaskRegisterCdmCallback.cs",
+        "src/CefSharp/Callback/TaskResolveCallback.cs",
+        "src/CefSharp/Callback/TaskSetCookieCallback.cs",
+        "src/CefSharp/CdmRegistration.cs",
+        "src/CefSharp/CefCustomScheme.cs",
+        "src/CefSharp/CefLibraryHandle.cs",
+        "src/CefSharp/CefSharpSettings.cs",
+        "src/CefSharp/Cookie.cs",
+        "src/CefSharp/DefaultApp.cs",
+        "src/CefSharp/DependencyChecker.cs",
+        "src/CefSharp/DomNode.cs",
+        "src/CefSharp/DownloadItem.cs",
+        "src/CefSharp/Enums/AlphaType.cs",
+        "src/CefSharp/Enums/CdmRegistrationErrorCode.cs",
+        "src/CefSharp/Enums/CefErrorCode.cs",
+        "src/CefSharp/Enums/CefEventFlags.cs",
+        "src/CefSharp/Enums/CefFileDialogFlags.cs",
+        "src/CefSharp/Enums/CefFileDialogMode.cs",
+        "src/CefSharp/Enums/CefFocusSource.cs",
+        "src/CefSharp/Enums/CefJsDialogType.cs",
+        "src/CefSharp/Enums/CefMenuCommand.cs",
+        "src/CefSharp/Enums/CefPdfPrintMarginType.cs",
+        "src/CefSharp/Enums/CefReturnValue.cs",
+        "src/CefSharp/Enums/CefState.cs",
+        "src/CefSharp/Enums/CefTerminationStatus.cs",
+        "src/CefSharp/Enums/CefThreadIds.cs",
+        "src/CefSharp/Enums/CertStatus.cs",
+        "src/CefSharp/Enums/ColorType.cs",
+        "src/CefSharp/Enums/ContextMenuEditState.cs",
+        "src/CefSharp/Enums/ContextMenuMediaState.cs",
+        "src/CefSharp/Enums/ContextMenuMediaType.cs",
+        "src/CefSharp/Enums/ContextMenuType.cs",
+        "src/CefSharp/Enums/CursorType.cs",
+        "src/CefSharp/Enums/DragOperationsMask.cs",
+        "src/CefSharp/Enums/FilterStatus.cs",
+        "src/CefSharp/Enums/KeyEventType.cs",
+        "src/CefSharp/Enums/KeyType.cs",
+        "src/CefSharp/Enums/LogSeverity.cs",
+        "src/CefSharp/Enums/MenuItemType.cs",
+        "src/CefSharp/Enums/MouseButtonType.cs",
+        "src/CefSharp/Enums/PaintElementType.cs",
+        "src/CefSharp/Enums/PluginPolicy.cs",
+        "src/CefSharp/Enums/PointerType.cs",
+        "src/CefSharp/Enums/PostDataElementType.cs",
+        "src/CefSharp/Enums/ReferrerPolicy.cs",
+        "src/CefSharp/Enums/ResourceType.cs",
+        "src/CefSharp/Enums/SchemeOptions.cs",
+        "src/CefSharp/Enums/SslContentStatus.cs",
+        "src/CefSharp/Enums/SslVersion.cs",
+        "src/CefSharp/Enums/TextInputMode.cs",
+        "src/CefSharp/Enums/TouchEventType.cs",
+        "src/CefSharp/Enums/TransitionType.cs",
+        "src/CefSharp/Enums/UrlRequestFlags.cs",
+        "src/CefSharp/Enums/UrlRequestStatus.cs",
+        "src/CefSharp/Enums/ValueType.cs",
+        "src/CefSharp/Enums/WindowOpenDisposition.cs",
+        "src/CefSharp/Event/AddressChangedEventArgs.cs",
+        "src/CefSharp/Event/ConsoleMessageEventArgs.cs",
+        "src/CefSharp/Event/FrameLoadEndEventArgs.cs",
+        "src/CefSharp/Event/FrameLoadStartEventArgs.cs",
+        "src/CefSharp/Event/JavascriptBindingCompleteEventArgs.cs",
+        "src/CefSharp/Event/JavascriptBindingEventArgs.cs",
+        "src/CefSharp/Event/JavascriptBindingMultipleCompleteEventArgs.cs",
+        "src/CefSharp/Event/JavascriptMessageReceivedEventArgs.cs",
+        "src/CefSharp/Event/LoadErrorEventArgs.cs",
+        "src/CefSharp/Event/LoadingStateChangedEventArgs.cs",
+        "src/CefSharp/Event/StatusMessageEventHandler.cs",
+        "src/CefSharp/Event/TitleChangedEventArgs.cs",
+        "src/CefSharp/Handler/DefaultRequestHandler.cs",
+        "src/CefSharp/Handler/IAccessibilityHandler.cs",
+        "src/CefSharp/Handler/IBrowserProcessHandler.cs",
+        "src/CefSharp/Handler/IContextMenuHandler.cs",
+        "src/CefSharp/Handler/ICookieAccessFilter.cs",
+        "src/CefSharp/Handler/IDialogHandler.cs",
+        "src/CefSharp/Handler/IDisplayHandler.cs",
+        "src/CefSharp/Handler/IDownloadHandler.cs",
+        "src/CefSharp/Handler/IDragHandler.cs",
+        "src/CefSharp/Handler/IExtensionHandler.cs",
+        "src/CefSharp/Handler/IFindHandler.cs",
+        "src/CefSharp/Handler/IFocusHandler.cs",
+        "src/CefSharp/Handler/IJsDialogHandler.cs",
+        "src/CefSharp/Handler/IKeyboardHandler.cs",
+        "src/CefSharp/Handler/ILifeSpanHandler.cs",
+        "src/CefSharp/Handler/ILoadHandler.cs",
+        "src/CefSharp/Handler/IRenderProcessMessageHandler.cs",
+        "src/CefSharp/Handler/IRequestContextHandler.cs",
+        "src/CefSharp/Handler/IRequestHandler.cs",
+        "src/CefSharp/Handler/IResourceHandler.cs",
+        "src/CefSharp/Handler/IResourceRequestHandler.cs",
+        "src/CefSharp/Handler/RequestHandler.cs",
+        "src/CefSharp/Handler/ResourceRequestHandler.cs",
+        "src/CefSharp/IApp.cs",
+        "src/CefSharp/IBrowser.cs",
+        "src/CefSharp/IBrowserHost.cs",
+        "src/CefSharp/IBrowserSettings.cs",
+        "src/CefSharp/IContextMenuParams.cs",
+        "src/CefSharp/ICookieManager.cs",
+        "src/CefSharp/IDomNode.cs",
+        "src/CefSharp/IDragData.cs",
+        "src/CefSharp/IExtension.cs",
+        "src/CefSharp/IFrame.cs",
+        "src/CefSharp/IImage.cs",
+        "src/CefSharp/IJavascriptObjectRepository.cs",
+        "src/CefSharp/IMenuModel.cs",
+        "src/CefSharp/IPopupFeatures.cs",
+        "src/CefSharp/IPostData.cs",
+        "src/CefSharp/IPostDataElement.cs",
+        "src/CefSharp/IRequest.cs",
+        "src/CefSharp/IRequestContext.cs",
+        "src/CefSharp/IResourceRequestHandlerFactory.cs",
+        "src/CefSharp/IResponse.cs",
+        "src/CefSharp/IResponseFilter.cs",
+        "src/CefSharp/ISchemeRegistrar.cs",
+        "src/CefSharp/ISslInfo.cs",
+        "src/CefSharp/IUrlRequest.cs",
+        "src/CefSharp/IUrlRequestClient.cs",
+        "src/CefSharp/IValue.cs",
+        "src/CefSharp/IWebBrowser.cs",
+        "src/CefSharp/IWindowInfo.cs",
+        "src/CefSharp/Internals/BrowserProcessResponse.cs",
+        "src/CefSharp/Internals/BrowserProcessService.cs",
+        "src/CefSharp/Internals/BrowserProcessServiceHost.cs",
+        "src/CefSharp/Internals/ByteArrayResourceHandler.cs",
+        "src/CefSharp/Internals/CefSharpArguments.cs",
+        "src/CefSharp/Internals/CefTimeUtils.cs",
+        "src/CefSharp/Internals/CommandLineArgDictionary.cs",
+        "src/CefSharp/Internals/CommandLineArgsParser.cs",
+        "src/CefSharp/Internals/ConcurrentMethodRunnerQueue.cs",
+        "src/CefSharp/Internals/CookieManagerDecorator.cs",
+        "src/CefSharp/Internals/DateTimeUtils.cs",
+        "src/CefSharp/Internals/FileResourceHandler.cs",
+        "src/CefSharp/Internals/HeaderNameValueCollection.cs",
+        "src/CefSharp/Internals/IBrowserAdapter.cs",
+        "src/CefSharp/Internals/IBrowserProcess.cs",
+        "src/CefSharp/Internals/IJavascriptCallbackFactory.cs",
+        "src/CefSharp/Internals/IMethodRunnerQueue.cs",
+        "src/CefSharp/Internals/IRenderWebBrowser.cs",
+        "src/CefSharp/Internals/ITaskScheduler.cs",
+        "src/CefSharp/Internals/IWebBrowserInternal.cs",
+        "src/CefSharp/Internals/InMemoryResourceRequestHandler.cs",
+        "src/CefSharp/Internals/IntPtrExtensions.cs",
+        "src/CefSharp/Internals/InternalWebBrowserExtensions.cs",
+        "src/CefSharp/Internals/JavascriptCallback.cs",
+        "src/CefSharp/Internals/JavascriptCallbackEndpointBehavior.cs",
+        "src/CefSharp/Internals/JavascriptCallbackSurrogate.cs",
+        "src/CefSharp/Internals/JavascriptMethod.cs",
+        "src/CefSharp/Internals/JavascriptObject.cs",
+        "src/CefSharp/Internals/JavascriptObjectRepository.cs",
+        "src/CefSharp/Internals/JavascriptProperty.cs",
+        "src/CefSharp/Internals/MethodInvocation.cs",
+        "src/CefSharp/Internals/MethodInvocationCompleteArgs.cs",
+        "src/CefSharp/Internals/MethodInvocationResult.cs",
+        "src/CefSharp/Internals/MethodParameter.cs",
+        "src/CefSharp/Internals/MethodRunnerQueue.cs",
+        "src/CefSharp/Internals/ParentProcessMonitor.cs",
+        "src/CefSharp/Internals/PendingTaskRepository.cs",
+        "src/CefSharp/Internals/ReflectionUtils.cs",
+        "src/CefSharp/Internals/RenderprocessClientFactory.cs",
+        "src/CefSharp/Internals/TaskExtensions.cs",
+        "src/CefSharp/Internals/TaskScheduler/LimitedConcurrencyLevelTaskScheduler.cs",
+        "src/CefSharp/Internals/WCFExtensions.cs",
+        "src/CefSharp/JavascriptBindingExtensions.cs",
+        "src/CefSharp/JavascriptException.cs",
+        "src/CefSharp/JavascriptIgnoreAttribute.cs",
+        "src/CefSharp/JavascriptResponse.cs",
+        "src/CefSharp/JavascriptStackFrame.cs",
+        "src/CefSharp/Lagacy/ResourceHandler.cs",
+        "src/CefSharp/ModelBinding/BindingMemberInfo.cs",
+        "src/CefSharp/ModelBinding/DefaultBinder.cs",
+        "src/CefSharp/ModelBinding/IBinder.cs",
+        "src/CefSharp/ModelBinding/IMethodInterceptor.cs",
+        "src/CefSharp/ModelBinding/ModelBindingExtensions.cs",
+        "src/CefSharp/NavigationEntry.cs",
+        "src/CefSharp/PdfPrintSettings.cs",
+        "src/CefSharp/PostDataExtensions.cs",
+        "src/CefSharp/Properties/AssemblyInfo.cs",
+        "src/CefSharp/ProxyOptions.cs",
+        "src/CefSharp/RenderProcess/IRenderProcessHandler.cs",
+        "src/CefSharp/RenderProcess/IV8Context.cs",
+        "src/CefSharp/RenderProcess/V8Exception.cs",
+        "src/CefSharp/RequestContextExtensions.cs",
+        "src/CefSharp/ResourceHandler.cs",
+        "src/CefSharp/ResourceRequestHandlerFactory.cs",
+        "src/CefSharp/ResourceRequestHandlerFactoryItem.cs",
+        "src/CefSharp/ResponseFilter/StreamResponseFilter.cs",
+        "src/CefSharp/SchemeHandler/FolderSchemeHandlerFactory.cs",
+        "src/CefSharp/SchemeHandler/ISchemeHandlerFactory.cs",
+        "src/CefSharp/SslStatus.cs",
+        "src/CefSharp/Structs/CompositionUnderline.cs",
+        "src/CefSharp/Structs/CursorInfo.cs",
+        "src/CefSharp/Structs/DraggableRegion.cs",
+        "src/CefSharp/Structs/KeyEvent.cs",
+        "src/CefSharp/Structs/MouseEvent.cs",
+        "src/CefSharp/Structs/Point.cs",
+        "src/CefSharp/Structs/Range.cs",
+        "src/CefSharp/Structs/Rect.cs",
+        "src/CefSharp/Structs/ResolveCallbackResult.cs",
+        "src/CefSharp/Structs/ScreenInfo.cs",
+        "src/CefSharp/Structs/Size.cs",
+        "src/CefSharp/Structs/TouchEvent.cs",
+        "src/CefSharp/V8Extension.cs",
+        "src/CefSharp/Visitor/ICookieVisitor.cs",
+        "src/CefSharp/Visitor/INavigationEntryVisitor.cs",
+        "src/CefSharp/Visitor/IStringVisitor.cs",
+        "src/CefSharp/Visitor/IWebPluginInfoVisitor.cs",
+        "src/CefSharp/Visitor/TaskCookieVisitor.cs",
+        "src/CefSharp/Visitor/TaskNavigationEntryVisitor.cs",
+        "src/CefSharp/Visitor/TaskStringVisitor.cs",
+        "src/CefSharp/Visitor/TaskWebPluginInfoVisitor.cs",
+        "src/CefSharp/Web/HtmlString.cs",
+        "src/CefSharp/Web/JsonString.cs",
+        "src/CefSharp/WebBrowserExtensions.cs",
+        "src/CefSharp/WebPluginInfo.cs"
+      ]
+    },
+    "CefSharp.Wpf/79.1.360": {
+      "sha512": "K4shUXhU8toNl0YzEbOcNo9S4GFIAV7ppCvj/pBkpuIpgf1j8FRyX8ZCCKv/XQrkNL5Fe33J43JCgN2PREVu5w==",
+      "type": "package",
+      "path": "cefsharp.wpf/79.1.360",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CefSharp/x64/CefSharp.Wpf.XML",
+        "CefSharp/x64/CefSharp.Wpf.dll",
+        "CefSharp/x64/CefSharp.Wpf.pdb",
+        "CefSharp/x86/CefSharp.Wpf.XML",
+        "CefSharp/x86/CefSharp.Wpf.dll",
+        "CefSharp/x86/CefSharp.Wpf.pdb",
+        "Readme.txt",
+        "build/CefSharp.Wpf.props",
+        "build/CefSharp.Wpf.targets",
+        "cefsharp.wpf.79.1.360.nupkg.sha512",
+        "cefsharp.wpf.nuspec",
+        "src/CefSharp.Wpf/CefSettings.cs",
+        "src/CefSharp.Wpf/ChromiumWebBrowser.cs",
+        "src/CefSharp.Wpf/DelegateCommand.cs",
+        "src/CefSharp.Wpf/Experimental/ChromiumWebBrowserWithTouchSupport.cs",
+        "src/CefSharp.Wpf/Experimental/WpfIMEKeyboardHandler.cs",
+        "src/CefSharp.Wpf/IRenderHandler.cs",
+        "src/CefSharp.Wpf/IWpfKeyboardHandler.cs",
+        "src/CefSharp.Wpf/IWpfWebBrowser.cs",
+        "src/CefSharp.Wpf/Internals/DragOperationMaskExtensions.cs",
+        "src/CefSharp.Wpf/Internals/IMEHandler.cs",
+        "src/CefSharp.Wpf/Internals/ImeNative.cs",
+        "src/CefSharp.Wpf/Internals/MonitorInfo.cs",
+        "src/CefSharp.Wpf/Internals/MonitorInfoEx.cs",
+        "src/CefSharp.Wpf/Internals/RectStruct.cs",
+        "src/CefSharp.Wpf/Internals/VirtualKeys.cs",
+        "src/CefSharp.Wpf/Internals/WpfExtensions.cs",
+        "src/CefSharp.Wpf/Internals/WpfKeyboardHandler.cs",
+        "src/CefSharp.Wpf/Internals/WpfLegacyKeyboardHandler.cs",
+        "src/CefSharp.Wpf/PaintEventArgs.cs",
+        "src/CefSharp.Wpf/Properties/AssemblyInfo.cs",
+        "src/CefSharp.Wpf/Rendering/AbstractRenderHandler.cs",
+        "src/CefSharp.Wpf/Rendering/DirectWritableBitmapRenderHandler.cs",
+        "src/CefSharp.Wpf/Rendering/Experimental/ByteArrayWritableBitmapRenderHandler.cs",
+        "src/CefSharp.Wpf/Rendering/Experimental/CompositionTargetRenderHandler.cs",
+        "src/CefSharp.Wpf/Rendering/Experimental/IncreaseBufferInteropRenderHandler.cs",
+        "src/CefSharp.Wpf/Rendering/InteropBitmapRenderHandler.cs",
+        "src/CefSharp.Wpf/Rendering/WritableBitmapRenderHandler.cs",
+        "src/CefSharp.Wpf/VirtualKeyboardRequestedEventArgs.cs",
+        "src/CefSharp.Wpf/WM.cs",
+        "src/CefSharp.Wpf/obj/x64/Release/GeneratedInternalTypeHelper.g.cs",
+        "src/CefSharp.Wpf/obj/x86/Release/GeneratedInternalTypeHelper.g.cs"
+      ]
+    },
+    "EntityFramework/6.3.0": {
+      "sha512": "mEvhoXscTyLFMcnbLzKlbWdx6N8fCY2IMe4drjUTMFqOqI4KThnTPXr1m50oXDJAn5PvCy2e90IcwN/OxkJUjg==",
+      "type": "package",
+      "path": "entityframework/6.3.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/EntityFramework.props",
+        "build/EntityFramework.targets",
+        "build/Microsoft.Data.Entity.Build.Tasks.dll",
+        "buildTransitive/EntityFramework.props",
+        "buildTransitive/EntityFramework.targets",
+        "content/net40/App.config.install.xdt",
+        "content/net40/App.config.transform",
+        "content/net40/Web.config.install.xdt",
+        "content/net40/Web.config.transform",
+        "entityframework.6.3.0.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/net40/EntityFramework.SqlServer.dll",
+        "lib/net40/EntityFramework.SqlServer.xml",
+        "lib/net40/EntityFramework.dll",
+        "lib/net40/EntityFramework.xml",
+        "lib/net45/EntityFramework.SqlServer.dll",
+        "lib/net45/EntityFramework.SqlServer.xml",
+        "lib/net45/EntityFramework.dll",
+        "lib/net45/EntityFramework.xml",
+        "lib/netstandard2.1/EntityFramework.SqlServer.dll",
+        "lib/netstandard2.1/EntityFramework.SqlServer.xml",
+        "lib/netstandard2.1/EntityFramework.dll",
+        "lib/netstandard2.1/EntityFramework.xml",
+        "tools/EntityFramework6.PS2.psd1",
+        "tools/EntityFramework6.PS2.psm1",
+        "tools/EntityFramework6.psd1",
+        "tools/EntityFramework6.psm1",
+        "tools/about_EntityFramework6.help.txt",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/net40/any/ef6.exe",
+        "tools/net40/any/ef6.pdb",
+        "tools/net40/win-x86/ef6.exe",
+        "tools/net40/win-x86/ef6.pdb",
+        "tools/net45/any/ef6.exe",
+        "tools/net45/any/ef6.pdb",
+        "tools/net45/win-x86/ef6.exe",
+        "tools/net45/win-x86/ef6.pdb",
+        "tools/netcoreapp3.0/any/ef6.dll",
+        "tools/netcoreapp3.0/any/ef6.pdb",
+        "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
+      ]
+    },
+    "FluentWPF/0.8.0": {
+      "sha512": "Yq/GjRtlNRjE5lLf99NWqJ+9kSeuhSrt55/Is1wgZwSL6s2oZWxfT1C6bnz7O+kzb/aAWEZD94X0MP5mW4H+qQ==",
+      "type": "package",
+      "path": "fluentwpf/0.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "fluentwpf.0.8.0.nupkg.sha512",
+        "fluentwpf.nuspec",
+        "lib/net45/FluentWPF.dll",
+        "lib/netcoreapp3.0/FluentWPF.dll"
+      ]
+    },
+    "Microsoft.Data.Sqlite/3.1.4": {
+      "sha512": "wXFufzZEGiRDM6jxi/ebyHKespms5Hk0zS5Q+8nrz/opHHIu5jIKoNe530484LPHdfYKZfXCOdzs+PsAfn6nRg==",
+      "type": "package",
+      "path": "microsoft.data.sqlite/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/_._",
+        "microsoft.data.sqlite.3.1.4.nupkg.sha512",
+        "microsoft.data.sqlite.nuspec"
+      ]
+    },
+    "Microsoft.Data.Sqlite.Core/3.1.4": {
+      "sha512": "bicm19o4CBh1jH6MKRhpzlBsNvKL1sa19Q6vs4goIxKk0WVUXk/nljW6tdo5t6lVD54k6OJrfFqTJsaR6WqEug==",
+      "type": "package",
+      "path": "microsoft.data.sqlite.core/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
+        "microsoft.data.sqlite.core.3.1.4.nupkg.sha512",
+        "microsoft.data.sqlite.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
+      "sha512": "OVPI/nh5AqfLCIKhAYqjCa6AHhc7oKApGcGM3UhMRSerFiBx58nSpGwxVFdMgjOCWZR+fA49nzsnKlWp5hFo8w==",
+      "type": "package",
+      "path": "sqlitepclraw.bundle_e_sqlite3/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/Xamarin.tvOS10/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.batteries_v2.dll",
+        "lib/net461/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netcoreapp3.0/SQLitePCLRaw.batteries_v2.dll",
+        "lib/netcoreapp3.0/SQLitePCLRaw.nativelibrary.dll",
+        "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll",
+        "sqlitepclraw.bundle_e_sqlite3.2.0.2.nupkg.sha512",
+        "sqlitepclraw.bundle_e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.core/2.0.2": {
+      "sha512": "TFSBX426OelS1tkaVC254NVVlrJIe9YLhWPkEvuqJj2104QpmDmEYOhfdfDJD1E/2SmqDhoRw1ek5cQHj8olcQ==",
+      "type": "package",
+      "path": "sqlitepclraw.core/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.2.0.2.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.lib.e_sqlite3/2.0.2": {
+      "sha512": "S+Tsqe/M7wsc+9HeediI6UHtBKf2X586aRwhi1aBVLGe0WxkAo52O9ZxwEy/v8XMLefcrEMupd2e9CDlIT6QCw==",
+      "type": "package",
+      "path": "sqlitepclraw.lib.e_sqlite3/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net461/SQLitePCLRaw.lib.e_sqlite3.targets",
+        "lib/net461/_._",
+        "lib/netstandard2.0/_._",
+        "runtimes/alpine-x64/native/libe_sqlite3.so",
+        "runtimes/linux-arm/native/libe_sqlite3.so",
+        "runtimes/linux-arm64/native/libe_sqlite3.so",
+        "runtimes/linux-armel/native/libe_sqlite3.so",
+        "runtimes/linux-musl-x64/native/libe_sqlite3.so",
+        "runtimes/linux-x64/native/libe_sqlite3.so",
+        "runtimes/linux-x86/native/libe_sqlite3.so",
+        "runtimes/osx-x64/native/libe_sqlite3.dylib",
+        "runtimes/win-arm/native/e_sqlite3.dll",
+        "runtimes/win-arm64/native/e_sqlite3.dll",
+        "runtimes/win-x64/native/e_sqlite3.dll",
+        "runtimes/win-x86/native/e_sqlite3.dll",
+        "runtimes/win10-arm/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-arm64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x64/nativeassets/uap10.0/e_sqlite3.dll",
+        "runtimes/win10-x86/nativeassets/uap10.0/e_sqlite3.dll",
+        "sqlitepclraw.lib.e_sqlite3.2.0.2.nupkg.sha512",
+        "sqlitepclraw.lib.e_sqlite3.nuspec"
+      ]
+    },
+    "SQLitePCLRaw.provider.dynamic_cdecl/2.0.2": {
+      "sha512": "ZSwacbKJUsxJEZxwT23uZVrGbaIvXcADZDz5Sr66fikO5eehdcceDncjzwzTzWfW13di8gpTpstx3WJSt/Ci5Q==",
+      "type": "package",
+      "path": "sqlitepclraw.provider.dynamic_cdecl/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.provider.dynamic_cdecl.dll",
+        "sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512",
+        "sqlitepclraw.provider.dynamic_cdecl.nuspec"
+      ]
+    },
+    "System.Buffers/4.4.0": {
+      "sha512": "AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "type": "package",
+      "path": "system.buffers/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "system.buffers.4.4.0.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Data.SQLite/1.0.112.2": {
+      "sha512": "mCeo1xj2wFCB6LXGP9R0DhD13bK+Rgoq77vQw1DQhr2tFjCOCtCp/1+ZG/GNI7UWAdau98l90iQMJrE91XMg5Q==",
+      "type": "package",
+      "path": "system.data.sqlite/1.0.112.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "system.data.sqlite.1.0.112.2.nupkg.sha512",
+        "system.data.sqlite.nuspec"
+      ]
+    },
+    "System.Data.SQLite.Core/1.0.112.2": {
+      "sha512": "iYj32NThg9oSr/0IvG0HEIVi5/x5qqdqAU4wu8sSYe94e8F+QbrXmsrP/tvWTre4ugkgTgdmPsJdtxDP4TIsEg==",
+      "type": "package",
+      "path": "system.data.sqlite.core/1.0.112.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net20/System.Data.SQLite.Core.targets",
+        "build/net20/x64/SQLite.Interop.dll",
+        "build/net20/x86/SQLite.Interop.dll",
+        "build/net40/System.Data.SQLite.Core.targets",
+        "build/net40/x64/SQLite.Interop.dll",
+        "build/net40/x86/SQLite.Interop.dll",
+        "lib/net20/System.Data.SQLite.dll",
+        "lib/net20/System.Data.SQLite.dll.config",
+        "lib/net20/System.Data.SQLite.xml",
+        "lib/net40/System.Data.SQLite.dll",
+        "lib/net40/System.Data.SQLite.dll.config",
+        "lib/net40/System.Data.SQLite.xml",
+        "lib/netstandard2.0/System.Data.SQLite.dll",
+        "lib/netstandard2.0/System.Data.SQLite.dll.config",
+        "lib/netstandard2.0/System.Data.SQLite.xml",
+        "lib/netstandard2.1/System.Data.SQLite.dll",
+        "lib/netstandard2.1/System.Data.SQLite.dll.config",
+        "lib/netstandard2.1/System.Data.SQLite.xml",
+        "runtimes/linux-x64/native/netstandard2.0/SQLite.Interop.dll",
+        "runtimes/linux-x64/native/netstandard2.1/SQLite.Interop.dll",
+        "runtimes/osx-x64/native/netstandard2.0/SQLite.Interop.dll",
+        "runtimes/osx-x64/native/netstandard2.1/SQLite.Interop.dll",
+        "runtimes/win-x64/native/netstandard2.0/SQLite.Interop.dll",
+        "runtimes/win-x64/native/netstandard2.1/SQLite.Interop.dll",
+        "runtimes/win-x86/native/netstandard2.0/SQLite.Interop.dll",
+        "runtimes/win-x86/native/netstandard2.1/SQLite.Interop.dll",
+        "system.data.sqlite.core.1.0.112.2.nupkg.sha512",
+        "system.data.sqlite.core.nuspec"
+      ]
+    },
+    "System.Data.SQLite.EF6/1.0.112.2": {
+      "sha512": "5oRfN4s3PKiGf2UgmVyVyS878QWoZ+wfPOUwbBKg8TL37zNVe+3OIv42HSOCE+/TcGpYt6tbxo2oHIvxb14bQQ==",
+      "type": "package",
+      "path": "system.data.sqlite.ef6/1.0.112.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net40/app.config.install.xdt",
+        "content/net40/app.config.transform",
+        "content/net40/web.config.install.xdt",
+        "content/net40/web.config.transform",
+        "lib/net40/System.Data.SQLite.EF6.dll",
+        "lib/netstandard2.1/System.Data.SQLite.EF6.dll",
+        "system.data.sqlite.ef6.1.0.112.2.nupkg.sha512",
+        "system.data.sqlite.ef6.nuspec",
+        "tools/net40/install.ps1"
+      ]
+    },
+    "System.Data.SQLite.Linq/1.0.112.2": {
+      "sha512": "h2ERsMN06FVjqfNd+afOSPjhr9qVzGGAmnw/PvD8OZY+iBosG5v/uYTRrdlnCptUx9AVlD9O3Ibzwt5YOZoEcg==",
+      "type": "package",
+      "path": "system.data.sqlite.linq/1.0.112.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/net20/app.config.transform",
+        "content/net20/web.config.transform",
+        "content/net40/app.config.transform",
+        "content/net40/web.config.transform",
+        "lib/net20/System.Data.SQLite.Linq.dll",
+        "lib/net40/System.Data.SQLite.Linq.dll",
+        "system.data.sqlite.linq.1.0.112.2.nupkg.sha512",
+        "system.data.sqlite.linq.nuspec"
+      ]
+    },
+    "System.IO.FileSystem/4.3.0": {
+      "sha512": "3wEMARTnuio+ulnvi+hkRNROYwa1kylvYahhcLk4HSoVdl+xxTFVeVlYOfLwrDPImGls0mDqbMhrza8qnWPTdA==",
+      "type": "package",
+      "path": "system.io.filesystem/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.IO.FileSystem.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.IO.FileSystem.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/de/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/es/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/fr/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/it/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/ja/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/ko/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/ru/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/zh-hans/System.IO.FileSystem.xml",
+        "ref/netstandard1.3/zh-hant/System.IO.FileSystem.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.io.filesystem.4.3.0.nupkg.sha512",
+        "system.io.filesystem.nuspec"
+      ]
+    },
+    "System.IO.FileSystem.DriveInfo/4.3.1": {
+      "sha512": "gz8sWY1XgW7gXYOGByug+yQKzObmYns9rsdS57rwHy+amIQt9vi8evYB20UXrOB5CR205cruh9xEjBEzGWnL7w==",
+      "type": "package",
+      "path": "system.io.filesystem.driveinfo/4.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.IO.FileSystem.DriveInfo.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.IO.FileSystem.DriveInfo.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.DriveInfo.dll",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.IO.FileSystem.DriveInfo.dll",
+        "runtimes/win/lib/net46/System.IO.FileSystem.DriveInfo.dll",
+        "runtimes/win/lib/netstandard1.3/System.IO.FileSystem.DriveInfo.dll",
+        "runtimes/win7/lib/netcore50/_._",
+        "system.io.filesystem.driveinfo.4.3.1.nupkg.sha512",
+        "system.io.filesystem.driveinfo.nuspec"
+      ]
+    },
+    "System.IO.FileSystem.Primitives/4.3.0": {
+      "sha512": "6QOb2XFLch7bEc4lIcJH49nJN2HV+OC3fHDgsLVsBVBk3Y4hFAnOBGzJ2lUu7CyDDFo9IBWkSsnbkT6IBwwiMw==",
+      "type": "package",
+      "path": "system.io.filesystem.primitives/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.IO.FileSystem.Primitives.dll",
+        "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.IO.FileSystem.Primitives.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.Primitives.dll",
+        "ref/netstandard1.3/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/de/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/es/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/fr/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/it/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/ja/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/ko/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/ru/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/zh-hans/System.IO.FileSystem.Primitives.xml",
+        "ref/netstandard1.3/zh-hant/System.IO.FileSystem.Primitives.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.io.filesystem.primitives.4.3.0.nupkg.sha512",
+        "system.io.filesystem.primitives.nuspec"
+      ]
+    },
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "type": "package",
+      "path": "system.memory/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Numerics.Vectors/4.4.0": {
+      "sha512": "UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
+      "type": "package",
+      "path": "system.numerics.vectors/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Numerics.Vectors.dll",
+        "lib/net46/System.Numerics.Vectors.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Numerics.Vectors.dll",
+        "lib/netstandard1.0/System.Numerics.Vectors.xml",
+        "lib/netstandard2.0/System.Numerics.Vectors.dll",
+        "lib/netstandard2.0/System.Numerics.Vectors.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Numerics.Vectors.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Numerics.Vectors.dll",
+        "ref/net46/System.Numerics.Vectors.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Numerics.Vectors.dll",
+        "ref/netstandard1.0/System.Numerics.Vectors.xml",
+        "ref/netstandard2.0/System.Numerics.Vectors.dll",
+        "ref/netstandard2.0/System.Numerics.Vectors.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.numerics.vectors.4.4.0.nupkg.sha512",
+        "system.numerics.vectors.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.7.1": {
+      "sha512": "zOHkQmzPCn5zm/BH+cxC1XbUS3P4Yoi3xzW7eRgVpDR2tPGSzyMZ17Ig1iRkfJuY0nhxkQQde8pgePNiA7z7TQ==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/net461/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.1": [
+      "CefSharp.Common >= 79.1.360",
+      "CefSharp.Wpf >= 79.1.360",
+      "FluentWPF >= 0.8.0",
+      "Microsoft.Data.Sqlite >= 3.1.4",
+      "System.Data.SQLite >= 1.0.112.2",
+      "System.IO.FileSystem.DriveInfo >= 4.3.1",
+      "System.Runtime.CompilerServices.Unsafe >= 4.7.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\nuked\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\nuked\\source\\repos\\HorusSearch\\HorusSearch\\HorusSearch.csproj",
+      "projectName": "HorusSearch",
+      "projectPath": "C:\\Users\\nuked\\source\\repos\\HorusSearch\\HorusSearch\\HorusSearch.csproj",
+      "packagesPath": "C:\\Users\\nuked\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nuked\\source\\repos\\HorusSearch\\HorusSearch\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\nuked\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net471"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net471": {
+          "projectReferences": {}
+        }
+      }
+    },
+    "frameworks": {
+      "net471": {
+        "dependencies": {
+          "CefSharp.Common": {
+            "target": "Package",
+            "version": "[79.1.360, )"
+          },
+          "CefSharp.Wpf": {
+            "target": "Package",
+            "version": "[79.1.360, )"
+          },
+          "FluentWPF": {
+            "target": "Package",
+            "version": "[0.8.0, )"
+          },
+          "Microsoft.Data.Sqlite": {
+            "target": "Package",
+            "version": "[3.1.4, )"
+          },
+          "System.Data.SQLite": {
+            "target": "Package",
+            "version": "[1.0.112.2, )"
+          },
+          "System.IO.FileSystem.DriveInfo": {
+            "target": "Package",
+            "version": "[4.3.1, )"
+          },
+          "System.Runtime.CompilerServices.Unsafe": {
+            "target": "Package",
+            "version": "[4.7.1, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\nuked\.nuget\packages\</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">4.9.3</NuGetToolVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)entityframework\6.3.0\build\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.3.0\build\EntityFramework.props')" />
+    <Import Project="$(NuGetPackageRoot)cef.redist.x86\79.1.36\build\cef.redist.x86.props" Condition="Exists('$(NuGetPackageRoot)cef.redist.x86\79.1.36\build\cef.redist.x86.props')" />
+    <Import Project="$(NuGetPackageRoot)cef.redist.x64\79.1.36\build\cef.redist.x64.props" Condition="Exists('$(NuGetPackageRoot)cef.redist.x64\79.1.36\build\cef.redist.x64.props')" />
+    <Import Project="$(NuGetPackageRoot)cefsharp.common\79.1.360\build\CefSharp.Common.props" Condition="Exists('$(NuGetPackageRoot)cefsharp.common\79.1.360\build\CefSharp.Common.props')" />
+    <Import Project="$(NuGetPackageRoot)cefsharp.wpf\79.1.360\build\CefSharp.Wpf.props" Condition="Exists('$(NuGetPackageRoot)cefsharp.wpf\79.1.360\build\CefSharp.Wpf.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\nuked\.nuget\packages\entityframework\6.3.0</PkgEntityFramework>
+    <PkgSystem_Data_SQLite_EF6 Condition=" '$(PkgSystem_Data_SQLite_EF6)' == '' ">C:\Users\nuked\.nuget\packages\system.data.sqlite.ef6\1.0.112.2</PkgSystem_Data_SQLite_EF6>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)entityframework\6.3.0\build\EntityFramework.targets" Condition="Exists('$(NuGetPackageRoot)entityframework\6.3.0\build\EntityFramework.targets')" />
+    <Import Project="$(NuGetPackageRoot)system.data.sqlite.core\1.0.112.2\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('$(NuGetPackageRoot)system.data.sqlite.core\1.0.112.2\build\net40\System.Data.SQLite.Core.targets')" />
+    <Import Project="$(NuGetPackageRoot)sqlitepclraw.lib.e_sqlite3\2.0.2\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets" Condition="Exists('$(NuGetPackageRoot)sqlitepclraw.lib.e_sqlite3\2.0.2\build\net461\SQLitePCLRaw.lib.e_sqlite3.targets')" />
+    <Import Project="$(NuGetPackageRoot)cefsharp.common\79.1.360\build\CefSharp.Common.targets" Condition="Exists('$(NuGetPackageRoot)cefsharp.common\79.1.360\build\CefSharp.Common.targets')" />
+    <Import Project="$(NuGetPackageRoot)cefsharp.wpf\79.1.360\build\CefSharp.Wpf.targets" Condition="Exists('$(NuGetPackageRoot)cefsharp.wpf\79.1.360\build\CefSharp.Wpf.targets')" />
+  </ImportGroup>
+</Project>

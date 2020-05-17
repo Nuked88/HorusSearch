@@ -13,11 +13,9 @@ using HorusSearch.Classes;
 namespace WpfApp1.Classes
 {
 
-
     public class NTFSRead
     {
-
-       
+      
         #region Insert Nodes
 
         /// <summary>
@@ -116,6 +114,7 @@ namespace WpfApp1.Classes
         }
 
         #endregion
+
         #region DatabaseOperation
 
         public static void createDB(bool update)
@@ -383,6 +382,7 @@ namespace WpfApp1.Classes
         }
         #endregion
 
+        #region Process Task
         public void getPriv()
         {
             if (!IsAdministrator())
@@ -433,20 +433,15 @@ namespace WpfApp1.Classes
         }
 
         //[PrincipalPermission(SecurityAction.Demand, Role = @"BUILTIN\Administrators")]
-     
-
-
-
+        #endregion
 
         public void ntfsread(IProgress<int> progress, IProgress<string> fase, bool update)
         {
-            // if (SharedVar.isIndexing == false)           {
         
                 string[] drivetoscan = DiskInfo.listDrive().ToArray();
                 createDB(update);
 
                 SharedVar.listScore = getAllIndexProcess();
-
 
                 int i = 1;
                 foreach (string drive in drivetoscan)
@@ -472,12 +467,7 @@ namespace WpfApp1.Classes
 
                     InsertNodes(nodes, driveToAnalyze, update);
                     i++;
-                }
-                /* AnalyzeFragmentation(nodes, driveToAnalyze);
-
-                     AnalyzeSimilarity(nodes, driveToAnalyze);*/
-                // }
-            
+                }    
         }
     }
 }

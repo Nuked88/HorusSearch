@@ -1,0 +1,13 @@
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\HorusSearch.csprojAssemblyReference.cache
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\App.g.cs
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\HorusSearch_MarkupCompile.cache
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\HorusSearch_MarkupCompile.lref
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\MainWindow.g.cs
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\HorusSearch_Content.g.cs
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\Templates\SPlayerView.baml
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\Templates\VPlayerView.baml
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\Templates\EmptyView.g.cs
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\Templates\GenericView.g.cs
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\Templates\SPlayerView.g.cs
+C:\Users\nuked\source\repos\HorusSearch\HorusSearch\obj\Debug\Templates\VPlayerView.g.cs
