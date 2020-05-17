@@ -17,52 +17,7 @@ namespace WpfApp1.Classes
     public class NTFSRead
     {
 
-        #region AnalyzeSimilarity
-
-        /// <summary>
-        /// Find similar files by grouping those of the exact same size together.
-        /// </summary>
-        static void AnalyzeSimilarity(IEnumerable<INode> nodes, DriveInfo driveInfo)
-        {
-            IDictionary<UInt64, List<INode>> sizeAggregate =
-                Algorithms.AggregateBySize(nodes, 10 * 1024 * 1024);
-
-            List<UInt64> sizes = new List<UInt64>(sizeAggregate.Keys);
-            sizes.Sort();
-            sizes.Reverse();    //make the bigger ones appear first
-
-            string targetFile = Path.Combine(driveInfo.Name, "similarfiles.txt");
-            using (StreamWriter fs = new StreamWriter(targetFile))
-            {
-                foreach (UInt64 size in sizes)
-                {
-                    List<INode> similarNodes = sizeAggregate[size];
-
-                    if (similarNodes.Count <= 1)
-                        continue;
-
-                    fs.WriteLine("-----------------------------------------");
-                    fs.WriteLine("SIZE: {0}", size);
-                    fs.WriteLine("-----------------------------------------");
-
-                    foreach (INode node in similarNodes)
-                        fs.WriteLine(
-                            string.Format(
-                                "Index {0}, {1}, {2}, size {3}, path {4}",
-                                node.NodeIndex,
-                                (node.Attributes & Attributes.Directory) != 0 ? "Dir" : "File",
-                                node.Name,
-                                node.Size,
-                                node.FullName
-                            )
-                         );
-                }
-            }
-
-            Console.WriteLine("File similarities report has been saved to {0}", targetFile);
-        }
-
-        #endregion
+       
         #region Insert Nodes
 
         /// <summary>
@@ -357,7 +312,7 @@ namespace WpfApp1.Classes
             {
                 conne.Open();
 
-                string sql = "SELECT name FROM files";
+                string sql = "SELECT name FROM files LIMIT 3";
 
                 //Read the newly inserted data:
                 var selectCmd = conne.CreateCommand();

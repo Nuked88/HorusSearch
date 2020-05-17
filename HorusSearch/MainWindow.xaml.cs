@@ -313,6 +313,13 @@ namespace WpfApp1
 
                 initDB();
             }
+            else if (!nread.checkDB(false))
+            {
+                Debug.Write("Corrupted Database Found, starting rebuild.");
+                nread.deleteDB();
+                initDB();
+               
+            }
             else
             {
                 onNormalStart();
